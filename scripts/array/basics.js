@@ -29,7 +29,6 @@ function printArrAscending(array, separator) {
 function arrayReverse(array) {
     var arrayRev = [];
     for (var i = array.length - 1; i >= 0; i--) {
-        console.log(array[i]);
         arrayRev.push(array[i]);
     }
     return arrayRev;
