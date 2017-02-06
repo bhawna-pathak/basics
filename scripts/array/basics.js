@@ -2,8 +2,8 @@ var array = [2, 3, 0, 1, 5, 8, 9, 2];
 console.log(array);
 
 // printArr(array);
-// printArrReverse(array, '#');
-printArrAscending(array, '<');
+printArrReverse(array, '#');
+// printArrAscending(array, '<');
 
 
 ///////////////////////////// Functions /////////////////////////////
@@ -26,14 +26,19 @@ function printArrAscending(array, separator) {
     printArr(arrayAsc, separator);
 }
 
+function arrayReverse(array) {
+    var arrayRev = [];
+    for (var i = array.length - 1; i >= 0; i--) {
+        console.log(array[i]);
+        arrayRev.push(array[i]);
+    }
+    return arrayRev;
+}
+
 function printArrReverse(array, separator) {
     separator = separator || " ";
-    var str = "";
-    for (var i = array.length - 1; i >= 0; i--) {
-        str = str + array[i] + separator;
-    }
-    str = str.substring(0, str.length - 1);
-    console.log(str);
+    var arrayRev = arrayReverse(array);
+    printArr(arrayRev, separator);
 }
 
 function printArr(array, separator) {
