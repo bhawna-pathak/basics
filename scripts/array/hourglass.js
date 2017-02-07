@@ -2,6 +2,7 @@ var _2dArray = make2dArray(6);
 print2dArray(_2dArray);
 
 
+///////////////////////////// Functions /////////////////////////////
 function make2dArray(rows, cols) {
     cols = cols || rows;
     var arr = [];
@@ -19,6 +20,10 @@ function print2dArray(array) {
     for (var i = 0; i < array.length; i++) {
         printArr(array[i]);
     }
+}
+
+function makeHourGlass(array) {
+
 }
 
 function printArr(array, separator) {
