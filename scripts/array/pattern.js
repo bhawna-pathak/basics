@@ -1,4 +1,4 @@
-printAstricTriangle();
+// printAstricTriangle();
 ///////////////////////////// Functions /////////////////////////////
 function printAstricTriangle(row) {
     for (var i = 0; i < row; i++) {
