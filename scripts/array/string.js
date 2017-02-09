@@ -1,18 +1,15 @@
 var str = 'my name is bhawna';
 // removeSpace(str);
 // getStringCount(str);
-evenOddNumber();
+// evenOddNumber();
 // fibonacci(15);
+swapNumber(5, 3);
 
 ///////////////////////////// Functions /////////////////////////////
 function removeSpace(str) {
-    var newString = '';
-    for (var i = 0; i < str.length; i++) {
-        if (str[i] == " ") {
-            newString = str.replace(/ /g, '');
-        }
-    }
-    return newString;
+    var newStr = str.replace(/ /g, '');
+    console.log(newStr);
+    return newStr;
 }
 
 function getStringCount(str) {
@@ -39,12 +36,7 @@ function getStringCount(str) {
 
 
 function evenOddNumber(num) {
-    var num = 2;
-    if (num % 2 == 0) {
-        console.log('Even Number');
-        return;
-    }
-    console.log('Odd Number');
+    (num % 2 == 0) ? console.log('Even Number'): console.log("Odd Number");
 }
 
 function fibonacci(len) {
@@ -55,4 +47,12 @@ function fibonacci(len) {
         array[i] = array[i - 1] + array[i - 2];
     }
     console.log(array);
+}
+
+function swapNumber(a, b) {
+    console.log('a = ' + a, 'b = ' + b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    console.log('After Swap : a = ' + a, 'b = ' + b);
 }
