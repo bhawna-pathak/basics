@@ -3,8 +3,9 @@
 // getStringCount(str);
 // evenOddNumber();
 // fibonacci(15);
+findFactorial();
 // swapNumber(5, 3);
-chkPalindrome('ddarmd');
+// chkPalindrome('ddarmd');
 
 ///////////////////////////// Functions /////////////////////////////
 function removeSpace(str) {
@@ -48,6 +49,15 @@ function fibonacci(len) {
         array[i] = array[i - 1] + array[i - 2];
     }
     console.log(array);
+}
+
+function findFactorial(num) {
+    var factorial = num;
+    for (var i = 1; i <= num; i++) {
+        factorial = factorial * (num - 1);
+        num--;
+    }
+    return factorial;
 }
 
 function swapNumber(a, b) {
