@@ -17,3 +17,16 @@ function printInvertAstrictTriangle(length) {
 
     }
 }
+
+function printFullTriangle(length) {
+    for (var i = 1; i <= length; i++) {
+        for (var j = i; j < length; j++) {
+            document.write("_");
+        }
+        for (var k = 1; k < (i * 2); k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+}
+
