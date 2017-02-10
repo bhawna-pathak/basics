@@ -30,3 +30,14 @@ function printFullTriangle(length) {
     }
 }
 
+function printInvertFullTriangle(length) {
+    for (var i = length; i >= 1; i--) {
+        for (var j = length; j > i; j--) {
+            document.write("_");
+        }
+        for (var k = 1; k < (i * 2); k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+}
