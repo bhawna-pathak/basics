@@ -1,9 +1,10 @@
-var str = 'my name is bhawna';
+// var str = 'my name is bhawna';
 // removeSpace(str);
 // getStringCount(str);
 // evenOddNumber();
 // fibonacci(15);
-swapNumber(5, 3);
+// swapNumber(5, 3);
+chkPalindrome('ddarmd');
 
 ///////////////////////////// Functions /////////////////////////////
 function removeSpace(str) {
@@ -55,4 +56,18 @@ function swapNumber(a, b) {
     b = a - b;
     a = a - b;
     console.log('After Swap : a = ' + a, 'b = ' + b);
+}
+
+function chkPalindrome(str) {
+    var string = '';
+    count = 0;
+    var length = str.length;
+    var mid = Math.floor(length / 2);
+    for (var i = 0; i !== mid; i++) {
+        if (str[i] !== str[length - i - 1]) {
+            console.log("It is not palindrome");
+            break;
+        }
+
+    }
 }
