@@ -4,8 +4,8 @@ console.log(array);
 // printArr(array);
 // printArrReverse(array, '#');
 // printArrAscending(array, '<');
-findSmallest(array);
-
+// findSmallest(array);
+deleteDuplicate(array);
 
 ///////////////////////////// Functions /////////////////////////////
 function arrayAscending(array) {
@@ -59,4 +59,22 @@ function findSmallest(array) {
         }
     }
     return smallest;
+}
+
+function deleteDuplicate(array) {
+    var uniqueArray = [];
+    var elementCount = [];
+    for (var i = 0; i < array.length; i++) {
+        if (uniqueArray.length == 0) {
+            uniqueArray.push(array[i]);
+        }
+        var current = uniqueArray.indexOf(array[i]);
+        if (current === -1) {
+            uniqueArray.push(array[i]);
+            elementCount.push(1);
+        } else {
+            elementCount[current] = elementCount[current] + 1;
+        }
+    }
+    return uniqueArray;
 }
