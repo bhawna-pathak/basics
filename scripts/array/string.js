@@ -3,7 +3,8 @@
 // getStringCount(str);
 // evenOddNumber();
 // fibonacci(15);
-findFactorial();
+// findFactorial();
+reverseNumber(12);
 // swapNumber(5, 3);
 // chkPalindrome('ddarmd');
 removeChar('Helo a tah ahdk s', 'a');
@@ -71,6 +72,17 @@ function findFactorial(num) {
         num--;
     }
     return factorial;
+}
+
+function reverseNumber(num) {
+    var reverse = 0;
+    var reminder;
+    while (num >= 1) {
+        reminder = num % 10;
+        reverse = (reverse * 10) + reminder;
+        num = num / 10;
+    }
+    return reverse;
 }
 
 
