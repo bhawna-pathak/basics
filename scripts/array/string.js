@@ -6,11 +6,24 @@
 findFactorial();
 // swapNumber(5, 3);
 // chkPalindrome('ddarmd');
+removeChar('Helo a tah ahdk s', 'a');
 
 ///////////////////////////// Functions /////////////////////////////
 function removeSpace(str) {
     var newStr = str.replace(/ /g, '');
     console.log(newStr);
+    return newStr;
+}
+
+function removeChar(str, charToRemove) {
+    var i = 0;
+    var newStr = '';
+    while (str[i] !== undefined) {
+        if (str[i] !== charToRemove) {
+            newStr += str[i];
+        }
+        i++;
+    }
     return newStr;
 }
 
@@ -59,6 +72,7 @@ function findFactorial(num) {
     }
     return factorial;
 }
+
 
 function swapNumber(a, b) {
     console.log('a = ' + a, 'b = ' + b);

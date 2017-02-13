@@ -2,8 +2,9 @@ var array = [2, 3, 0, 1, 5, 8, 9, 2];
 console.log(array);
 
 // printArr(array);
-printArrReverse(array, '#');
+// printArrReverse(array, '#');
 // printArrAscending(array, '<');
+findSmallest(array);
 
 
 ///////////////////////////// Functions /////////////////////////////
@@ -48,4 +49,14 @@ function printArr(array, separator) {
     }
     str = str.substring(0, str.length - 1);
     console.log(str);
+}
+
+function findSmallest(array) {
+    var smallest = array[0];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] < smallest) {
+            smallest = array[i];
+        }
+    }
+    return smallest;
 }
