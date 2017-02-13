@@ -5,7 +5,8 @@ console.log(array);
 // printArrReverse(array, '#');
 // printArrAscending(array, '<');
 // findSmallest(array);
-deleteDuplicate(array);
+// deleteDuplicate(array);
+doAdditionElements(array);
 
 ///////////////////////////// Functions /////////////////////////////
 function arrayAscending(array) {
@@ -77,4 +78,12 @@ function deleteDuplicate(array) {
         }
     }
     return uniqueArray;
+}
+
+function doAdditionElements(array) {
+    var total = 0;
+    for (var i = 0; i < array.length; i++) {
+        total = total + array[i];
+    }
+    return total;
 }
