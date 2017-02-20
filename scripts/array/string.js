@@ -4,7 +4,9 @@
 // evenOddNumber();
 // fibonacci(15);
 // findFactorial();
-reverseNumber(12);
+// reverseNumber(12);
+armstrongNumber(1634);
+
 // swapNumber(5, 3);
 // chkPalindrome('ddarmd');
 removeChar('Helo a tah ahdk s', 'a');
@@ -80,7 +82,7 @@ function reverseNumber(num) {
     while (num >= 1) {
         reminder = num % 10;
         reverse = (reverse * 10) + reminder;
-        num = num / 10;
+        num = Math.floor(num / 10);
     }
     return reverse;
 }
@@ -106,4 +108,26 @@ function chkPalindrome(str) {
         }
 
     }
+}
+
+function armstrongNumber(number) {
+    var rem, result = 0;
+    var originalNumber = number;
+    var n = 0;
+
+    while (originalNumber != 0) {
+        originalNumber = Math.floor(originalNumber / 10);
+        n++;
+    }
+    originalNumber = number;
+    while (originalNumber != 0) {
+        remainder = originalNumber % 10;
+        result = result + Math.pow(remainder, n);
+        originalNumber = Math.floor(originalNumber / 10);
+    }
+    console.log(result);
+    if (result == number)
+        console.log("It is an Armstrong number.");
+    else
+        console.log("It is not an Armstrong number.");
 }
